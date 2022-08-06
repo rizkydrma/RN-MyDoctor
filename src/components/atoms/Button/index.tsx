@@ -1,14 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {ButtonProps} from './types';
 
-const Button: React.FC<ButtonProps> = ({type, title}: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({type, title, onPress}: ButtonProps) => {
   return (
-    <View
+    <TouchableOpacity
       style={{
         ...styles.container,
         backgroundColor: type === 'secondary' ? 'white' : '#0BCAD4',
-      }}>
+      }}
+      onPress={onPress}>
       <Text
         style={{
           ...styles.text,
@@ -16,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({type, title}: ButtonProps) => {
         }}>
         {title}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -29,8 +30,9 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   text: {
-    fontSize: 16,
-    fontWeight: '600',
+    fontSize: 18,
+    fontFamily: 'Nunito-Semibold',
+    // fontWeight: '600',
     textAlign: 'center',
     color: 'white',
   },
