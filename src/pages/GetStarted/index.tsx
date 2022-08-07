@@ -6,6 +6,7 @@ import {ILGetStarted, ILLogo} from '../../assets';
 import {Button} from '../../components';
 import Gap from '../../components/atoms/Gap';
 import {NavigationList} from '../../types';
+import {colors} from '../../utils';
 
 const GetStarted = () => {
   const navigation = useNavigation<NativeStackNavigationProp<NavigationList>>();
@@ -43,17 +44,14 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     justifyContent: 'space-between',
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   title: {
     fontFamily: 'Nunito-Semibold',
     fontSize: 28,
     // fontWeight: '700',
-    color: 'white',
+    color: colors.text.secondary,
     marginTop: 91,
     maxWidth: 250,
   },
 });
-function alert(arg0: string): void {
-  throw new Error('Function not implemented.');
-}

@@ -1,5 +1,6 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
+import {colors} from '../../../utils';
 
 type InputProps = {
   label: string;
@@ -21,13 +22,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 12,
     paddingHorizontal: 10,
-    borderColor: '#E9E9E9',
+    borderColor: colors.border,
     borderRadius: 10,
   },
   label: {
     fontFamily: 'Nunito-Regular',
     fontSize: 16,
-    color: '#7D8797',
+    color: colors.text.secondary,
     marginBottom: 6,
   },
 });

@@ -1,5 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {colors} from '../../../utils';
 
 type alignType = 'left' | 'center' | 'right';
 
@@ -7,13 +8,14 @@ type LinkProps = {
   text: string;
   size?: number;
   align?: alignType;
+  onPress?: () => void;
 };
 
-const Link: React.FC<LinkProps> = ({text, size, align = 'left'}) => {
+const Link: React.FC<LinkProps> = ({text, size, align = 'left', onPress}) => {
   return (
-    <View>
+    <TouchableOpacity onPress={onPress}>
       <Text style={styles.text(size, align)}>{text}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -26,7 +28,7 @@ type Style = {
 const styles = StyleSheet.create<Style>({
   text: (size: number, align: alignType) => ({
     fontSize: size,
-    color: '#7D8797',
+    color: colors.text.secondary,
     fontFamily: 'Nunito-Regular',
     textDecorationLine: 'underline',
     textAlign: align,

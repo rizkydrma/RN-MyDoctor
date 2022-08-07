@@ -4,6 +4,7 @@ import {ILLogo} from '../../assets';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationList} from '../../types';
+import {colors} from '../../utils';
 
 const Splash = () => {
   const navigation = useNavigation<NativeStackNavigationProp<NavigationList>>();
@@ -25,7 +26,7 @@ export default Splash;
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     flex: 1,
     alignItems: 'center',
     flexDirection: 'column',
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Nunito-SemiBold',
     // fontWeight: '600',
-    color: '#112340',
+    color: colors.text.primary,
     marginTop: 20,
   },
 });

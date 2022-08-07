@@ -1,1 +1,4 @@
-export const icon = () => {};
+//@ts-nocheck
+import IconBackDark from './ic-back-dark.svg';
+
+export {IconBackDark};
