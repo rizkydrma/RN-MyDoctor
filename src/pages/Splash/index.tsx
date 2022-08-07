@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontFamily: 'Nunito-SemiBold',
-    // fontWeight: '600',
     color: colors.text.primary,
     marginTop: 20,
   },

@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'Nunito-Semibold',
     fontSize: 28,
-    // fontWeight: '700',
     color: colors.text.secondary,
     marginTop: 91,
     maxWidth: 250,

@@ -1,17 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {IconBackDark} from '../../../assets';
-import {Gap} from '../../atoms';
+import {StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../../utils';
+import {Button, Gap} from '../../atoms';
 
 type HeaderProps = {
   text: string;
+  onPress?: () => void;
 };
 
-const Header: React.FC<HeaderProps> = ({text}) => {
+const Header: React.FC<HeaderProps> = ({text, onPress}) => {
   return (
     <View style={styles.container}>
-      <IconBackDark />
+      <Button type="icon-only" onPress={onPress} />
       <Text style={styles.text}>{text}</Text>
       <Gap width={24} />
     </View>

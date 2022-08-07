@@ -1,11 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {IconBackDark} from '../../../assets';
 import {colors} from '../../../utils';
+import IconOnly from './IconOnly';
 
-type ButtonType = 'primary' | 'secondary';
+type ButtonType = 'primary' | 'secondary' | 'icon-only';
 
 type ButtonProps = {
-  title: string;
+  title?: string;
   type?: ButtonType;
   onPress?: () => void;
 };
@@ -17,6 +19,10 @@ const Button: React.FC<ButtonProps> = ({
   title,
   onPress,
 }: ButtonProps) => {
+  if (type === 'icon-only') {
+    return <IconOnly icon={<IconBackDark />} onpress={onPress} />;
+  }
+
   return (
     <TouchableOpacity style={styles.container(type)} onPress={onPress}>
       <Text style={styles.text(type)}>{title}</Text>
