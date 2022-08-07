@@ -6,7 +6,7 @@ import {Button, Gap, Link} from '../../components';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack/lib/typescript/src/types';
 import {NavigationList} from '../../types';
-import {colors} from '../../utils';
+import {colors, fonts} from '../../utils';
 
 const Login = () => {
   const navigation = useNavigation<NativeStackNavigationProp<NavigationList>>();
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'Nunito-Semibold',
+    fontFamily: fonts.primary[600],
     color: colors.text.primary,
     maxWidth: 153,
     marginVertical: 40,

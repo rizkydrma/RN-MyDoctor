@@ -6,7 +6,7 @@ import {ILGetStarted, ILLogo} from '../../assets';
 import {Button} from '../../components';
 import Gap from '../../components/atoms/Gap';
 import {NavigationList} from '../../types';
-import {colors} from '../../utils';
+import {colors, fonts} from '../../utils';
 
 const GetStarted = () => {
   const navigation = useNavigation<NativeStackNavigationProp<NavigationList>>();
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   title: {
-    fontFamily: 'Nunito-Semibold',
+    fontFamily: fonts.primary[600],
     fontSize: 28,
     color: colors.text.secondary,
     marginTop: 91,

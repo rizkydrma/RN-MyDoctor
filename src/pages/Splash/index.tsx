@@ -4,7 +4,7 @@ import {ILLogo} from '../../assets';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationList} from '../../types';
-import {colors} from '../../utils';
+import {colors, fonts} from '../../utils';
 
 const Splash = () => {
   const navigation = useNavigation<NativeStackNavigationProp<NavigationList>>();
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     color: colors.text.primary,
     marginTop: 20,
   },

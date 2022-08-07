@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {IconBackDark} from '../../../assets';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 import IconOnly from './IconOnly';
 
 type ButtonType = 'primary' | 'secondary' | 'icon-only';
@@ -48,7 +48,7 @@ const styles = StyleSheet.create<Style>({
   }),
   text: (type: ButtonType) => ({
     fontSize: 18,
-    fontFamily: 'Nunito-Semibold',
+    fontFamily: fonts.primary[600],
     textAlign: 'center',
     color:
       type === 'secondary'

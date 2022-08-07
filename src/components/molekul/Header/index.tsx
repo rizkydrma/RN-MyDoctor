@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 import {Button, Gap} from '../../atoms';
 
 type HeaderProps = {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontFamily: 'Nunito-Semibold',
+    fontFamily: fonts.primary[600],
     color: colors.text.primary,
     flex: 1,
     textAlign: 'center',
