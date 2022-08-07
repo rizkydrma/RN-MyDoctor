@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 
 type alignType = 'left' | 'center' | 'right';
 
@@ -29,7 +29,7 @@ const styles = StyleSheet.create<Style>({
   text: (size: number, align: alignType) => ({
     fontSize: size,
     color: colors.text.secondary,
-    fontFamily: 'Nunito-Regular',
+    fontFamily: fonts.primary.normal,
     textDecorationLine: 'underline',
     textAlign: align,
   }),
